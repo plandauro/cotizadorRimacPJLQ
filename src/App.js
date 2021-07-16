@@ -3,6 +3,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "./render/Home";
+import Armador from "./render/Armador";
 
 function App() {
   return (
@@ -14,8 +15,17 @@ function App() {
           </Route>
         </Switch>
       </Router>
+
+      <Router>
+        <Switch>
+          <Route path="Armador">
+            <Armador />
+          </Route>
+        </Switch>
+      </Router>
+
     </HelmetProvider>
-  );
+  ); 
 }
 
 export default App;
